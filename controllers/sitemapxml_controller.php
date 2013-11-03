@@ -73,7 +73,7 @@ class SitemapxmlController extends BaserPluginAppController {
 			$File = new File($path);
 			$File->write($sitemap);
 			$File->close();
-			$this->Session->setFlash('サイトマップの生成が完了しました。');
+			$this->setMessage('サイトマップの生成が完了しました。');
 			chmod($path, 0666);
 		}
 		
